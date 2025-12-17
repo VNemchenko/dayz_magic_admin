@@ -32,3 +32,14 @@ python main.py
 ```
 
 The service will run continuously, checking the log file once per minute and delivering summaries to the configured Telegram chat.
+
+### Running with Docker Compose
+
+1. Create a `.env` file with the configuration variables from the table above.
+2. Build and start the container:
+
+```bash
+docker compose up --build
+```
+
+The service will start with the minimal `python:3.12-slim` base image and restart automatically unless stopped.
